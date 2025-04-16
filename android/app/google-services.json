@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "493786329501",
+    "project_id": "manypay-5949c",
+    "storage_bucket": "manypay-5949c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493786329501:android:e14f0b50c4d56c9b8fbf74",
+        "android_client_info": {
+          "package_name": "com.example.manypay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6aQaXiQDecC4f7Dfw9Vcv4ZCfc1gbK00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
