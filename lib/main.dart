@@ -1,29 +1,30 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:manypay/firebase_options.dart';
-import 'package:manypay/home_page.dart';
+import 'package:flutter/widgets.dart';
+import 'package:manypay/config.dart';
+import 'pages/home_page.dart';
+import 'package:manypay/widgets/checkauth.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  await initConfigurations();
 
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'ManyPay',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 53, 72, 248),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
         ),
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const HomePage(),
+      home: HomePage(), // CheckAuth widget to determine the initial page
     );
   }
 }
